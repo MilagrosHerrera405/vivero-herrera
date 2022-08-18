@@ -1,11 +1,13 @@
 import React from "react";
 import { Container, LogoContainer, Menu, MenuItem, MenuItemLink, Wrapper } from "./Navbar.elements";
 import {GiFlowerPot} from "react-icons/gi";
+import { IconContext } from "react-icons";
 
 const Navbar = () => {
     return(
     <Container>
         <Wrapper>
+            <IconContext.Provider value={{style:{fontSize: "2em"}}}>
             <LogoContainer>
                 <GiFlowerPot/>
                 <p>Vivero</p>
@@ -19,22 +21,23 @@ const Navbar = () => {
 
                 <MenuItem>
                 <MenuItemLink>
-                ABOUT ME
+                PRODUCTOS
                 </MenuItemLink>
                 </MenuItem>
 
                 <MenuItem>
                 <MenuItemLink>
-                PORTFOLIO
+                POLÍTICA DE DEVOLUCIONES
                 </MenuItemLink>
                 </MenuItem>
 
                 <MenuItem>
                 <MenuItemLink>
-                CONTACT ME
+                CONTACTO
                 </MenuItemLink>
                 </MenuItem>
             </Menu>
+            </IconContext.Provider>
         </Wrapper>
     </Container>
     )
