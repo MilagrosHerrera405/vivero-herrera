@@ -45,7 +45,7 @@ export const LogoContainer = styled.div`
 
     svg{
     fill: #AC4425;
-    margin: 1.3rem;
+    margin: 0.5rem;
     }
   }
 `;
