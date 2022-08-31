@@ -34,7 +34,7 @@ export const LogoContainer = styled.div`
   svg {
     fill: #ac4425;
     margin: 0.5rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   @media screen and (max-width: 960px){
