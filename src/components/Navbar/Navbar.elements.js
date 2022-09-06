@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.Link`
 	width: 100%;
 	height: 70px;
 	background-color: #9eb23b;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.Link`
 	width: 100%;
 	max-width: 1300px;
 	height: 100%;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 	margin: auto;
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.Link`
 	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -103,7 +103,7 @@ export const MenuItemLink = styled.a`
 		}
 	}
 
-	div {
+	Link {
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -120,7 +120,7 @@ export const MenuItemLink = styled.a`
 	@media screen and (max-width: 960px) {
 		width: 100%;
 
-		div {
+		Link {
 			width: 30%;
 			justify-content: left;
 
@@ -131,7 +131,7 @@ export const MenuItemLink = styled.a`
 	}
 
 	@media screen and (max-width: 880px) {
-		div {
+		Link {
 			width: 40%;
 			justify-content: left;
 
@@ -142,7 +142,7 @@ export const MenuItemLink = styled.a`
 	}
 
 	@media screen and (max-width: 500px) {
-		div {
+		Link {
 			width: 60%;
 			justify-content: left;
 
@@ -153,7 +153,7 @@ export const MenuItemLink = styled.a`
 	}
 
 	@media screen and (max-width: 260px) {
-		div {
+		Link {
 			width: 100%;
 			justify-content: left;
 

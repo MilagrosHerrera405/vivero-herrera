@@ -11,6 +11,17 @@
     padding: 10px;
 }
 
+.contenedorControles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    width: 90%;
+    height: 30px;
+}
+
 .estilos{
     background-color: #9EB23B;
     width: 25%;

@@ -1,35 +1,40 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Catalogo } from './ItemListContainer.elements';
-import '../ItemDetailContainer/ItemDetailContainer.css';
-import ItemCount from '../ItemCount/ItemCount';
+import   './ItemListContainer.elements';
+// import '../ItemDetailContainer/ItemDetailContainer.css';
+// import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import { arregloProductos } from '../baseDatos/baseDatos';
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = ({ texto }) => {
-	const [data, setData] = useState([]);
+	const {tipoProducto} = useParams();
+    console.log(tipoProducto)
+    const [productos, setProductos] = useState([]);
+
+    const Promise = new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve(arregloProductos);
+        }, 3000);
+    })
 
 	useEffect(() => {
-		const getData = new Promise((resolve) => {
-			setTimeout(() => {
-				resolve(arregloProductos);
-			}, 3000);
-		});
+		Promise.then((res) =>{
+			if(!tipoProducto){
+				setProductos(res)
+			}  else{
+                const nuevaLista = res.filter(item=>item.categoria === tipoProducto);
+				setProductos(nuevaLista)
+	}
 
-		getData.then((res) => setData(res));
-	}, []);
-
-	const onAdd = (quantity) => {
-		console.log(`Compraste ${quantity} unidades`);
-	};
+})
+	},[tipoProducto])
+	console.log('productos', productos)
 
 	return (
-		<Container>
-			<Catalogo>
-				<h1>Texto provisional</h1>
-			</Catalogo>
-			<ItemCount initial={1} stock={5} onAdd={onAdd} />
-			<ItemList productos={data} />
-		</Container>
+		<ItemList>
+		<p>item list container</p>
+		<ItemList items={productos}/>
+	</ItemList>
 	);
 };
 
