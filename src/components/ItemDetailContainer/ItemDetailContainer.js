@@ -5,27 +5,27 @@ import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
-	const {productId} = useParams();
+	const {productoId} = useParams();
     
-	console.log(productId);
+	console.log(productoId);
 	
 	const [item, setItem] = useState({});
 
 	const getItem = (id) => {
 		return new Promise((resolve, reject) => {
-			const product = arregloProductos.find(item=>item.id === parseInt(id));
-            resolve(product);
+			const producto = arregloProductos.find(item=>item.id === parseInt(id));
+            resolve(producto);
 		});
 	};
 
 	useEffect(() => {
 		const getProducto = async () => {
-			const producto = await getItem(productId);
+			const producto = await getItem(productoId);
 			console.log('producto', producto);
 			setItem(producto);
 		};
 		getProducto();
-	}, [productId]);
+	}, [productoId]);
 
 	
 	return (

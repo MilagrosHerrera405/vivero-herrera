@@ -26,9 +26,9 @@ export const ItemListContainer = ({ texto }) => {
 			}else{
                 const nuevaLista = res.filter(item=>item.categoria === tipoProducto);
 				setProductos(nuevaLista)
-	        }
-        })
-	}, [])
+			}
+        });
+	}, []);
 	console.log('productos', productos)
 
 	return (
