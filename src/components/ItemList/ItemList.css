@@ -1,6 +1,6 @@
 .estilos-listado{
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #243746;

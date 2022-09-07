@@ -6,7 +6,8 @@ import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
 	const {productId} = useParams();
-    console.log("productId",productId);
+    
+	console.log(productId);
 	
 	const [item, setItem] = useState({});
 
@@ -19,14 +20,14 @@ export const ItemDetailContainer = () => {
 
 	useEffect(() => {
 		const getProducto = async () => {
-			const producto = await getItem();
+			const producto = await getItem(productId);
 			console.log('producto', producto);
 			setItem(producto);
 		};
 		getProducto();
-	});
+	}, [productId]);
 
-	console.log('item:', item);
+	
 	return (
 		<div className='item-detail-container'>
 			<p style={{ width: '100%', color: 'white' }}>item detail container</p>

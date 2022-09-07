@@ -23,19 +23,18 @@ export const ItemListContainer = ({ texto }) => {
 		prom.then((res) =>{
 			if(!tipoProducto){
 				setProductos(res)
-			}  else{
+			}else{
                 const nuevaLista = res.filter(item=>item.categoria === tipoProducto);
 				setProductos(nuevaLista)
-	}
-
-})
-	})
+	        }
+        })
+	}, [])
 	console.log('productos', productos)
 
 	return (
 		<div className="item-list-container">
 		<p>item list container</p>
-		<ItemList items={productos}/>
+		<ItemList productos={productos}/>
 	</div>
 	);
 };
