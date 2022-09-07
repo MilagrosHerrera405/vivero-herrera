@@ -1,5 +1,5 @@
 import Item from '../Item/Item';
-import './ItemList.css';
+
 import React from 'react';
 import {Link} from 'react-router-dom';
 
@@ -10,9 +10,9 @@ const ItemList = ({ productos }) => {
             <div style={{width:"100%"}}>item list</div>
             {
                 productos.map(producto=>(
-                    <Link key={producto.id} to={`/item/${producto.id}`}>
-                        <Item item={producto}/>
-                    </Link>
+                    // <Link key={producto.id} to={`/item/${producto.id}`}>
+                        <Item unProducto={producto}/>
+                    // </Link>
                 ))
             }
         </div>

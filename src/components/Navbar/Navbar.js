@@ -17,7 +17,7 @@ const Navbar = () => {
 					{showMobileMenu ? <FaTimes /> : <FaBars />}
 				</MobileIcon>
 
-				<Link>
+				<Link to="/">
 				<LogoContainer className=''>
 					<GiFlowerPot />
 					<span>Vivero</span>
@@ -28,7 +28,7 @@ const Navbar = () => {
 					<MenuItem>
 					
 						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-							<Link>
+							<Link to="/">
 								<FaHome />
 								HOME
 							</Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 					<MenuItem>
 						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-							<Link>
+							<Link to="/">
 								<FaBookmark />
 								CATEGORÍAS
 							</Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
 					<MenuItem>
 						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-							<Link>
+							<Link to="/">
 								<FaHeart />
 								MIS FAVORITOS
 							</Link>

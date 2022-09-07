@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import   './ItemListContainer.elements';
+import   './ItemListContainer.css';
 // import '../ItemDetailContainer/ItemDetailContainer.css';
 // import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
@@ -8,17 +9,18 @@ import { useParams } from "react-router-dom";
 
 export const ItemListContainer = ({ texto }) => {
 	const {tipoProducto} = useParams();
-    console.log(tipoProducto)
-    const [productos, setProductos] = useState([]);
+    console.log(tipoProducto);
 
-    const Promise = new Promise((resolve, reject)=>{
+	const [productos, setProductos] = useState([]);
+
+    const prom = new Promise((resolve, reject)=>{
         setTimeout(() => {
             resolve(arregloProductos);
         }, 3000);
-    })
+    });
 
 	useEffect(() => {
-		Promise.then((res) =>{
+		prom.then((res) =>{
 			if(!tipoProducto){
 				setProductos(res)
 			}  else{
@@ -27,14 +29,14 @@ export const ItemListContainer = ({ texto }) => {
 	}
 
 })
-	},[tipoProducto])
+	})
 	console.log('productos', productos)
 
 	return (
-		<ItemList>
+		<div className="item-list-container">
 		<p>item list container</p>
 		<ItemList items={productos}/>
-	</ItemList>
+	</div>
 	);
 };
 
