@@ -9,7 +9,7 @@ const Item = ({ unProducto }) => {
 				<p className='title'>{unProducto.title}</p>
 				<img className='card-img-top' src={unProducto.pictureUrl} alt='' />
 				<div className='card-body text light'>
-				<Link to={`/item/${unProducto.id}`}>
+				<Link to={`/productos/${unProducto.id}`}>
 					<a href={'/'} className='btn btn-outline-success'>
 						Ver detalle del producto
 					</a>
