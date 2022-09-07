@@ -29,7 +29,7 @@ export const ItemListContainer = ({ texto }) => {
 			}
         });
 	}, []);
-	console.log('productos', productos)
+
 
 	return (
 		<div className="item-list-container">
