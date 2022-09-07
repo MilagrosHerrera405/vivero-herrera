@@ -24,7 +24,7 @@ export const ItemDetailContainer = () => {
 			setItem(producto);
 		};
 		getProducto();
-	}, [productId]);
+	});
 
 	console.log('item:', item);
 	return (

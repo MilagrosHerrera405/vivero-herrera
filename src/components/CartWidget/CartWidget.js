@@ -11,7 +11,7 @@ const CartWidget = () => {
     <div> 
     <Container>
       <LogoContainer2>
-        <Link> 
+        <Link to="/cart"> 
         <HiOutlineShoppingCart />
         </Link>
       </LogoContainer2>

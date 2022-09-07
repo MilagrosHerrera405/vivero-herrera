@@ -10,9 +10,9 @@ const ItemList = ({ productos }) => {
             <div style={{width:"100%"}}>item list</div>
             {
                 productos.map(producto=>(
-                    // <Link key={producto.id} to={`/item/${producto.id}`}>
+                    <Link key={producto.id} to={`/item/${producto.id}`}>
                         <Item unProducto={producto}/>
-                    // </Link>
+                    </Link>
                 ))
             }
         </div>
