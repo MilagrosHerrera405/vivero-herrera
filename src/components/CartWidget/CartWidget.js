@@ -14,6 +14,7 @@ const CartWidget = () => {
         <Link to="/cart"> 
         <HiOutlineShoppingCart />
         </Link>
+        <span style={{backgroundColor: 'white', borderRadius:"50%", width:"10px", heigth:"10px", fontSize:"10px", color:"black"}}>2</span>
       </LogoContainer2>
     </Container>
     </div>

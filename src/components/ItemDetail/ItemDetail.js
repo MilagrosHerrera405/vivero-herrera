@@ -1,8 +1,12 @@
-import React from 'react';
 import './ItemDetail.css';
+import { ItemCount } from '../ItemCount/ItemCount';
 
 
 export const ItemDetail = ({ item }) => {
+	const onAdd = (count)=>{
+        console.log("onAdd", count)
+    }
+
 	return (
 
 		<div className='detail-container'>
@@ -15,6 +19,7 @@ export const ItemDetail = ({ item }) => {
 				<h5>$ {item.price}</h5>
 				<p>{item.description}</p>
 			</div>
+			<ItemCount initial={1} stock={10} onAdd={onAdd}/>
 		</div>
 	);
 };

@@ -6,12 +6,12 @@
     width: 80%;
     height: auto;
     padding: 10px;
-    background-color: azure;
+    background-color: #FCF9C6;
 }
 .img-container{
     display: flex;
     width: 250px;
-    height: 250px;
+    height: auto;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
