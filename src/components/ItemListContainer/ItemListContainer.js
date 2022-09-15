@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 export const ItemListContainer = ({ texto }) => {
 	const {tipoProducto} = useParams();
-    console.log(tipoProducto);
+    console.log('tipoProducto', tipoProducto);
 
 	const [productos, setProductos] = useState([]);
 
@@ -28,9 +28,9 @@ export const ItemListContainer = ({ texto }) => {
 				setProductos(nuevaLista)
 			}
         });
-	}, []);
+	}, [tipoProducto]);
 
-
+	console.log('productos', productos)
 	return (
 		<div className="item-list-container">
 		<p>item list container</p>

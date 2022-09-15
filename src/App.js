@@ -15,7 +15,7 @@ function App() {
 		<CartProvider>  
 		<BrowserRouter>
 		<div className="App">
-			<Navbar />
+			<Navbar/>
 			<div>
 			<Routes>
 				<Route path='/' element={<ItemListContainer />}/> 

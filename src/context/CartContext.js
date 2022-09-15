@@ -8,14 +8,14 @@ export const CartProvider = ({children})=>{
     const [productCartList, setProductCartList] = useState([]);
 
 
-    const addProduct = (product)=>{
-        const newList = [...productCartList,product];
+    const addProduct = (producto)=>{
+        const newList = [...productCartList,producto];
         setProductCartList(newList)
     }
 
-    const deleteProduct = (idProduct)=>{
+    const deleteProduct = (idProductos)=>{
         const copyArray = [...productCartList];
-        const newArray = copyArray.filter(elm=>elm.id !== idProduct);
+        const newArray = copyArray.filter(elm=>elm.id !== idProductos);
         setProductCartList(newArray);
     }
 

@@ -6,9 +6,7 @@ import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
 	const {productoId} = useParams();
-    
 	console.log('productoId:>>', productoId);
-	console.log('arregloProductos :>> ', arregloProductos);
 	
 	const [item, setItem] = useState({});
 
@@ -32,11 +30,11 @@ export const ItemDetailContainer = () => {
 
 	
 
-	
+	console.log('item:', item)
 	return (
 		<div className='item-detail-container'>
-			<p>item detail container</p>
-			<ItemDetail item={item}/>
+			<p style={{width:"100%", color: "white"}}>item detail container</p>
+            <ItemDetail item={item}/>
 		</div>
 	);
 };

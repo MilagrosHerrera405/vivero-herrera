@@ -17,43 +17,43 @@ const Navbar = () => {
 					{showMobileMenu ? <FaTimes /> : <FaBars />}
 				</MobileIcon>
 
+				
+				<LogoContainer>
 				<Link to="/">
-				<LogoContainer className=''>
 					<GiFlowerPot />
 					<span>Vivero</span>
-				</LogoContainer>
 				</Link>
+				</LogoContainer>
+				
 
 				<Menu open={showMobileMenu}>
-					<MenuItem>
 					
+					<MenuItem>
+						<Link to="/">
 						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-							<Link to="/">
 								<FaHome />
 								HOME
-							</Link>
 						</MenuItemLink>
-						
+						</Link>
 					</MenuItem>
 
 
 					<MenuItem>
+					<Link to="/">
 						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-							<Link to="/">
 								<FaBookmark />
 								CATEGORÍAS
-							</Link>
 						</MenuItemLink>
+					</Link>
 					</MenuItem>
 
 					<MenuItem>
+					<Link to="/">
 						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-							<Link to="/">
 								<FaHeart />
 								MIS FAVORITOS
-							</Link>
 						</MenuItemLink>
-
+						</Link>
 					</MenuItem>
 				</Menu>
 				
