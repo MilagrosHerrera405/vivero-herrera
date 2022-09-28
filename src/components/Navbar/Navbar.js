@@ -5,7 +5,7 @@ import { Container, LogoContainer, Menu, MenuItem, MenuItemLink, MobileIcon, Wra
 
 import { GiFlowerPot } from 'react-icons/gi';
 import { FaBars, FaHome, FaHeart, FaBookmark, FaTimes } from 'react-icons/fa';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -17,46 +17,42 @@ const Navbar = () => {
 					{showMobileMenu ? <FaTimes /> : <FaBars />}
 				</MobileIcon>
 
-				
 				<LogoContainer>
-				<Link to="/">
-					<GiFlowerPot />
-					<span>Vivero</span>
-				</Link>
+					<Link to='/'>
+						<GiFlowerPot />
+						<span>Vivero</span>
+					</Link>
 				</LogoContainer>
-				
 
 				<Menu open={showMobileMenu}>
-					
 					<MenuItem>
-						<Link to="/">
-						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+						<Link to='/'>
+							<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
 								<FaHome />
 								HOME
-						</MenuItemLink>
+							</MenuItemLink>
 						</Link>
 					</MenuItem>
 
-
 					<MenuItem>
-					<Link to="/">
-						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+						<Link to='/'>
+							<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
 								<FaBookmark />
 								CATEGORÍAS
-						</MenuItemLink>
-					</Link>
+							</MenuItemLink>
+						</Link>
 					</MenuItem>
 
 					<MenuItem>
-					<Link to="/">
-						<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+						<Link to='/'>
+							<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
 								<FaHeart />
 								MIS FAVORITOS
-						</MenuItemLink>
+							</MenuItemLink>
 						</Link>
 					</MenuItem>
 				</Menu>
-				
+
 				<CartWidget />
 			</Wrapper>
 		</Container>

@@ -35,18 +35,6 @@ export const ItemListContainer = ({ texto }) => {
 		<div className='item-list-container'>
 			<p>item list container</p>
 			<div className='container m-0 p-0 align-center'>
-				<div className='row sarasa'>
-					<div className='col-xs-12 col-md-3 figazza'>
-						<p className='blanco'>COLUMNA NUMERO 1</p>
-					</div>
-					<div className='col-xs-12 col-md-8 figazza'>
-						<p className='blanco'>COLUMNA NUMERO 2</p>
-					</div>
-					<div className='col-xs-12 mumbasa'>asdasda</div>
-				</div>
-				<div className='row mumbasa'>
-					<button className='btn btn-warning'>asdasdasda</button>
-				</div>
 			</div>
 			<ItemList productos={productos} />
 		</div>

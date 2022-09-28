@@ -14,28 +14,24 @@ export const Wrapper = styled.div`
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: auto;
-	
 `;
 
-export const LogoContainer = styled.div` 
-display: flex;
-align-self: center;
-align-items: center;
-justify-content: center;
+export const LogoContainer = styled.div`
+	display: flex;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
 
-	
 	span {
 		font-size: 1.2rem;
 		color: #ac4425;
 		margin: 0.5;
 	}
-	
+
 	svg {
 		font-size: 2rem;
 		fill: #ac4425;
 		margin: 0.5rem;
-		
-	
 	}
 
 	@media screen and (max-width: 960px) {
@@ -49,6 +45,7 @@ justify-content: center;
 		}
 	}
 `;
+
 
 
 export const Menu = styled.ul`

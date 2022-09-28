@@ -10,7 +10,7 @@ export const arregloProductos = [
 	{
 		id: 1,
 		title: 'Tronco de Brasil',
-		price: '30usd',
+		price: '30',
 		pictureUrl: troncoDeBrasil,
 		categoria: 'plantas de interior',
 		description:
@@ -19,7 +19,7 @@ export const arregloProductos = [
 	{
 		id: 2,
 		title: 'Helecho',
-		price: '40usd',
+		price: '40',
 		pictureUrl: helecho,
 		categoria: 'plantas de interior',
 		description:
@@ -28,7 +28,7 @@ export const arregloProductos = [
 	{
 		id: 3,
 		title: 'Potus',
-		price: '60usd',
+		price: '60',
 		pictureUrl: potus,
 		categoria: 'plantas de interior',
 		description:
@@ -37,7 +37,7 @@ export const arregloProductos = [
 	{
 		id: 4,
 		title: 'Espatifilo',
-		price: '65usd',
+		price: '65',
 		pictureUrl: espatifilo,
 		categoria: 'plantas de interior',
 		description:
@@ -46,7 +46,7 @@ export const arregloProductos = [
 	{
 		id: 5,
 		title: 'Sansevieria',
-		price: '45usd',
+		price: '45',
 		pictureUrl: sansevieria,
 		categoria: 'plantas de interior',
 		description:
@@ -55,7 +55,7 @@ export const arregloProductos = [
 	{
 		id: 6,
 		title: 'Clivia',
-		price: '70usd',
+		price: '70',
 		pictureUrl: clivia,
 		categoria: 'plantas de interior',
 		description:
@@ -64,7 +64,7 @@ export const arregloProductos = [
 	{
 		id: 7,
 		title: 'Dischidia',
-		price: '80usd',
+		price: '80',
 		pictureUrl: dischidia,
 		categoria: 'plantas de interior',
 		description:

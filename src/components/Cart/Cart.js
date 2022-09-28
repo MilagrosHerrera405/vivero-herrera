@@ -14,7 +14,7 @@ export const Cart = () => {
             <p>CartContainer</p>
       <div>
         {
-          productCartList.length>0 ?
+          productCartList.length>0 ? 
           <>
             {
               productCartList.map(item=>(

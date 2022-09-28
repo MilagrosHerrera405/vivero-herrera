@@ -12,9 +12,9 @@ export const CartItem = ({item}) => {
             </div>
             <div className='cart-info-container'>
                 <p>{item.title}</p>
-                <p>precio unitario: {item.price}</p>
+                <p>precio unitario: {item.price} usd</p>
                 <p>cantidad: {item.quantity}</p>
-                <p>Precio total: {item.totalPrice}</p>
+                <p>Precio total: {item.totalPrice} usd</p>
                 <button onClick={()=>removeProduct(item.id)}>Eliminar producto</button>
             </div>
         </div>
