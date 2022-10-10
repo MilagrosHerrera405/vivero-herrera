@@ -6,6 +6,7 @@ import { CartContext } from '../../context/CartContext';
 import {Link} from 'react-router-dom';
 
 
+
 export const ItemDetail = ({ item }) => {
 	const {addProduct} = useContext(CartContext);
 	const [quantity, setQuantity] = useState(0);
@@ -32,7 +33,8 @@ export const ItemDetail = ({ item }) => {
 			{
                 quantity>0 &&
                 <Link to="/cart">
-                    <button>Ir al carrito</button>
+					
+                    <button  type="button" class="btn btn-success">Ir al carrito</button>
                 </Link>
             }
 		</div>

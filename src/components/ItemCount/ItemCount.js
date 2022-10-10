@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState} from "react";
 import "./ItemCount.css";
 
 export const ItemCount = ({initial, stock, onAdd}) => {
@@ -25,12 +25,12 @@ const increase = () => {
     <div className="counter">
         <p>Stock disponible: {stock}</p>
         <div className='contenedorControles'>      
-        <button  disabled={stock===0} onClick={decrease} className="estilos">-</button>
+        <button type="button" class="btn btn-success"  disabled={stock===0} onClick={decrease} >-</button>
         <p>{count}</p>
-        <button  disabled={stock===0} onClick={increase} className="estilos">+</button>
+        <button type="button" class="btn btn-success" disabled={stock===0} onClick={increase} >+</button>
 
         </div>
-        <button   disabled={stock===0} className="carrito" onClick={() => onAdd(count)} >Agregar al carrito</button>
+        <button type="button" class="btn btn-success mt-2"  disabled={stock===0}  onClick={() => onAdd(count)} >Agregar al carrito</button>
     </div>
     );
 };
