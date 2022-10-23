@@ -35,7 +35,7 @@ const Navbar = () => {
 					</MenuItem>
 
 					<MenuItem>
-						<Link to='/'>
+						<Link to='/category'>
 							<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
 								<FaBookmark />
 								CATEGORÍAS
@@ -44,7 +44,7 @@ const Navbar = () => {
 					</MenuItem>
 
 					<MenuItem>
-						<Link to='/'>
+						<Link to='/favoritos'>
 							<MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
 								<FaHeart />
 								MIS FAVORITOS
@@ -52,7 +52,6 @@ const Navbar = () => {
 						</Link>
 					</MenuItem>
 				</Menu>
-
 				<CartWidget />
 			</Wrapper>
 		</Container>

@@ -46,8 +46,6 @@ export const LogoContainer = styled.div`
 	}
 `;
 
-
-
 export const Menu = styled.ul`
 	height: 100%;
 	display: flex;
@@ -81,7 +79,7 @@ export const MenuItem = styled.li`
 	}
 `;
 
-export const MenuItemLink = styled.a`
+export const MenuItemLink = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
