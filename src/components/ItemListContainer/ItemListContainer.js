@@ -32,27 +32,15 @@ export const ItemListContainer = () => {
 					console.log(data);
 					setProductos(data);
 				} else {
-					const query = (collection(db, 'items'), where('categoria', '==', categoria));
-					const response = await getDocs(query);
+					const queryRef = collection(db, "items");
+					const q = query(queryRef, where('categoria', '==', categoria));
+					const response = await getDocs(q);
 					const docs = response.docs;
 					const data = docs.map((doc) => {
 						return { ...doc.data(), id: doc.id };
 					});
 					console.log(data);
 					setProductos(data);
-					// let queryRef = !categoria
-					// 	? collection(db, 'items')
-					// 	: query(collection(db, 'items'), where('categoria', '==', categoria));
-					// const response = await getDocs(queryRef);
-					// console.log(response.docs);
-					// const datos = response.docs.map((doc) => {
-					// 	const newDoc = {
-					// 		...doc.data(),
-					// 		id: doc.id,
-					// 	};
-					// 	return newDoc;
-					// });
-					// setProductos(datos);
 				}
 			} catch (error) {
 				console.log(error);
