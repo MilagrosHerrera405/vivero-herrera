@@ -28,7 +28,7 @@ export const ItemDetail = ({ item }) => {
 			<ItemCount initial={1} stock={10} onAdd={onAdd} />
 			{quantity > 0 && (
 				<Link to='/cart'>
-					<button type='button' class='btn btn-success'>
+					<button type='button' className='btn btn-success'>
 						Ir al carrito
 					</button>
 				</Link>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ItemDetailContainer.css';
-import { arregloProductos } from '../baseDatos/baseDatos';
+import { db } from '../../utils/firebase';
+import { getDoc, doc } from 'firebase/firestore';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
 
@@ -10,27 +11,22 @@ export const ItemDetailContainer = () => {
 	
 	const [item, setItem] = useState({});
 
-	const getItem = (id) => {
-		return new Promise((resolve, reject) => {
-			const producto = arregloProductos.find(item=>item.id === parseInt(id));
-            resolve(producto);
-		});
-	};
-
-	
-
 	useEffect(() => {
-		const getProducto = async () => {
-			const producto = await getItem(productoId);
-			console.log('producto', producto);
-			setItem(producto);
+		const getData = async () => {
+			try {
+				if (productoId) {
+					const docRef = doc(db, "items", productoId);
+					const response = await getDoc(docRef);
+					const docs = response.data();
+					console.log('docs:>>', docs);
+					setItem(docs);
+				}
+			} catch (error) {
+				console.log(error);
+			}
 		};
-		getProducto();
-	}, [productoId]);
-
-	
-
-	console.log('item:', item)
+		getData();
+	},[productoId]);
 	return (
 		<div className='item-detail-container'>
 			<p style={{width:"100%", color: "white"}}>item detail container</p>
