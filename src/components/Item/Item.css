@@ -2,7 +2,7 @@
 
 .film{
     width: 200px;
-    height: auto;
+    height: 450px;
     margin: 10px;
     padding: 10px;
     background-color: #9eb23b;
@@ -11,7 +11,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .film img{
@@ -27,4 +26,12 @@
     height: 100%;
     display: flex;
     justify-content: center;
+}
+
+div .card {
+    height: 450px;
+}
+
+.card-img-top{
+    align-items: center;
 }

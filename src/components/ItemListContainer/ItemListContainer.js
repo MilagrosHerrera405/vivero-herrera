@@ -51,7 +51,6 @@ export const ItemListContainer = () => {
 
 	return (
 		<div className='item-list-container'>
-			<p>item list container</p>
 			<ItemList productos={productos} />
 		</div>
 	);
