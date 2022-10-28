@@ -7,8 +7,6 @@ import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
 	const {productoId} = useParams();
-	console.log('productoId:>>', productoId);
-	
 	const [item, setItem] = useState({});
 
 	useEffect(() => {
@@ -18,7 +16,6 @@ export const ItemDetailContainer = () => {
 					const docRef = doc(db, "items", productoId);
 					const response = await getDoc(docRef);
 					const docs = response.data();
-					console.log('docs:>>', docs);
 					setItem(docs);
 				}
 			} catch (error) {

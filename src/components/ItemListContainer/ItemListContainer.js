@@ -8,9 +8,6 @@ import { db } from '../../utils/firebase';
 
 export const ItemListContainer = () => {
 	const { categoria } = useParams();
-
-	console.log('categoria', categoria);
-
 	const [productos, setProductos] = useState([]);
 
 	// const promesa = new Promise((resolve, reject)=>{
@@ -29,7 +26,6 @@ export const ItemListContainer = () => {
 					const data = docs.map((doc) => {
 						return { ...doc.data(), id: doc.id };
 					});
-					console.log(data);
 					setProductos(data);
 				} else {
 					const queryRef = collection(db, "items");
@@ -39,7 +35,6 @@ export const ItemListContainer = () => {
 					const data = docs.map((doc) => {
 						return { ...doc.data(), id: doc.id };
 					});
-					console.log(data);
 					setProductos(data);
 				}
 			} catch (error) {

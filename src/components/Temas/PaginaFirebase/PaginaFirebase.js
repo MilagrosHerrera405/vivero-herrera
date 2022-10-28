@@ -14,7 +14,6 @@ export const PaginaFirebase = () => {
 			const data = docs.map((doc) => {
 				return { ...doc.data(), id: doc.id };
 			});
-			console.log(data);
 			setArregloProductos(data);
 		};
 		getData();
@@ -29,8 +28,7 @@ export const PaginaFirebase = () => {
 				...response.data(),
 				id: response.id,
 			};
-			console.log('productos', producto);
-			// setArregloProductos(data);
+			setArregloProductos(producto);
 		};
 		getDocumento();
 	}, []);

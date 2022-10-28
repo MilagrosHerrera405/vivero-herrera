@@ -6,8 +6,7 @@ import { db } from '../../utils/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
 export const CartContainer = () => {
-	const { productCartList, clearProductCartList, getTotalPrice } = useContext(CartContext);
-	console.log(productCartList);
+	const { productCartList, clearProductCartList } = useContext(CartContext);
 	const [idOrder, setIdOrder] = useState('');
 	const [compra, setCompra] = useState('');
 
